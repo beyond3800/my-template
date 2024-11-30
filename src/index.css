@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.link{
+    @apply mt-2 rounded-md p-1 flex hover:bg-[#eee] hover:text-[#555] text-sm
+}
+.sub-link{
+    @apply mt-1 rounded-md p-1 flex hover:bg-[#eee] hover:text-[#555]
+}
+.tran{
+    transition: ease-in-out ;
+    line-height: 40px;
+}
+.darkMode{
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+}
+.bg{
+    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+.scroll{
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: '1px solid #ccc';
+}
+.scroll::-webkit-scrollbar {
+    width: 50px; /* Width of the scrollbar */
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 40px; /* Rounded corners for the track */
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 40px; /* Rounded corners for the thumb */
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the thumb on hover */
+}
+
+/* Firefox */
+.scroll {
+    scrollbar-width: bold; /* Make the scrollbar thin */
+    scrollbar-color: #888 #f1f1f1; /* Thumb color and track color */
+}
+.shd{
+    box-shadow: 1px 0px 2px 12px #888;
+}
+.main{
+    display: grid;
+    grid-template-areas: 
+        'sidebar nav nav nav'
+        'sidebar content content content'
+        'sidebar content content content';
+    grid-template-columns: 200px 1fr; /* Sidebar width and flexible content */
+    grid-template-rows: auto 1fr; /* Auto height for the first row and flexible height for the second */
+    height: 100vh;             ;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.nav{
+    grid-area: nav;
+}
+.content{
+    grid-area: content;
+    overflow-x: hidden;
+}
+@media (max-width: 767px) {
+    .main {
+        grid-template-areas: 
+            'nav nav nav nav'
+            'content content content content'
+            'content content content content';
+        grid-template-columns: 1fr; /* Adjust columns to only one */
+    }
+}
+.showNav{
+    @apply fixed right-0 opacity-100 
+}
+.disable{
+    overflow: hidden;
+    opacity: 0.5;
+}
+.letter-spacing{
+    letter-spacing: 2px;
+}
+.bold{
+    transition: left 0.3s ease; /* Smooth transition */
+    z-index: 1000;
+}
+.customInputs{
+    @apply bg-transparent border-0 shadow-sm shadow-[#888] w-full
+}
+.focus-none:focus{
+    background-color: transparent;
+}
+th{
+    @apply shadow-sm shadow-[#999]
+}
+td{
+    @apply shadow-sm shadow-[#999]
+}
+.btn-success{
+   @apply hover:bg-green-500 hover:text-white
+}
+.btn-danger{
+   @apply hover:bg-red-500 hover:text-white
+}
+.btn-primary{
+   @apply hover:bg-slate-500 hover:text-white
+}
