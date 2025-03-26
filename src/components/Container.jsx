@@ -6,8 +6,7 @@ const Container = ({ children,handleClick }) => {
   return (
     <div
       className={`${mode == 'light' ? 'bg-[#ffffff] text-[#999]' : ' bg-slate-950 text-[#f0f0f0]'} overflow-hidden main pb-10`}
-      ref={containerRef}
-    >
+      ref={containerRef}>
           {children}
     </div>
   )

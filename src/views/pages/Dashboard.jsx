@@ -4,24 +4,19 @@ import Wrap from '../../components/Wrap'
 import Content from '../../components/Content'
 import Table from '../../components/Table'
 import CustomBtn from '../../components/button/CustomBtn'
+import Dropdown from '../../components/dropdowns/Dropdown'
 
 const Dashboard = () => {
   return (
     <Content>
       <div className="pt-2">
         <Wrap>
-            <LineChart data={[95, 59, 80, 81, 56]} title='School' labels={['January', 'February', 'March', 'April', 'May']} />
-            <LineChart data={[65, 75, 85, 95, 55]} title='Performance' labels={['June', 'July', 'August', 'September', 'October']} />
-            <LineChart data={[45, 30, 60, 70, 80]} title='Attendance' labels={['November', 'December', 'January', 'February', 'March']} />
-            <LineChart data={[55, 65, 75, 85, 95]} title='Engagement' labels={['April', 'May', 'June', 'July', 'August']} />
+          <LineChart data={[95, 59, 80, 81, 56]} title='School' labels={['January', 'February', 'March', 'April', 'May']} />
+          <LineChart data={[65, 75, 85, 95, 55]} title='Performance' labels={['June', 'July', 'August', 'September', 'October']} />
+          <LineChart data={[45, 30, 60, 70, 80]} title='Attendance' labels={['November', 'December', 'January', 'February', 'March']} />
+          <LineChart data={[55, 65, 75, 85, 95]} title='Engagement' labels={['April', 'May', 'June', 'July', 'August']} />
         </Wrap>
-
-        {/* Second Wrap for Bar Charts */}
-        {/* <Wrap> */}
-            <BarChart data={[12, 19, 3, 5, 2]} title='Sales Data' />
-            <BarChart data={[5, 10, 15, 20, 25]} title='Revenue Data' />
-        {/* </Wrap> */}
-        {/* <PieChart/> */}
+        {/* <BarChart data={[12, 19, 3, 5, 2]} title='Sales Data' /> */}
         <Table
           datas={[
             { id: 1, name: 'John Doe', age: 28, email: 'john@example.com' },
@@ -40,7 +35,7 @@ const Dashboard = () => {
             {id: 7, th:'Delete'}
           ]}
           btn={[
-            { id: 1, btn: <CustomBtn title={`View`} style={`btn-primary px-4`}/> },
+            { id: 1, btn: <CustomBtn title={`View`} style={`btn-primary px-4`} type={`reset`}/> },
             { id: 2, btn: <CustomBtn title={`Edit`} style={`btn-success px-4`}/> },
             { id: 3, btn: <CustomBtn title={`Delete`} style={`btn-danger px-4`}/> },
           ]}

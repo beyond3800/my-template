@@ -7,7 +7,7 @@ const Content = ({ children }) => {
     closeNav()
   }
   return (
-    <div className='content scroll px-10 pt-3 pb-10 h-screen' onClick={() => handleClick()} ref={contentRef}>
+    <div className='content strollbar px-10 pt-3 pb-10 h-screen' onClick={() => handleClick()} ref={contentRef}>
       {children}
     </div>
   )

@@ -2,22 +2,15 @@ import { faChevronDown, faChevronRight, faSignsPost } from '@fortawesome/free-so
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 
-const NavDropdown = ({ style, header, children }) => {
-  const [show, setShow] = useState(false)
-  const openDropdown = () => {
-    setShow(prev=>!prev)
-  }
+const NavDropdown = ({ style, header, children, isOpen, handleClick}) => {
   return (
     <div className={` mx-2 ${style}`}>
-      <div className="link flex justify-between px-1" onClick={() => openDropdown()}>
-        <span>
-          <span className='mr-2'><FontAwesomeIcon icon={faSignsPost} size='xs' /></span>
-          {header}
-        </span>
-        <span>{show?<FontAwesomeIcon icon={faChevronDown} size='xs' /> :<FontAwesomeIcon icon={faChevronRight} size='xs' />}</span>
-      </div>
-      {show&&<div className="w-auto h-auto ml-8 text-xs opacity-80 transition">
-        {children}
+      {isOpen&&<div className="w-auto h-auto ml-8 text-xs opacity-80 transition">
+        {React.Children.map(children, (child) => {
+          return React.cloneElement(child, {
+            onClick: () => handleClick(), // Pass the onClick handler
+          });
+      })}
       </div>}
     </div>
   )

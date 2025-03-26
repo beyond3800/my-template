@@ -32,7 +32,7 @@ const PasswordInput = ({ title, style, handleChange, type, name, id, value }) =>
             ref={passwordRef}
             />
             {value && <span>
-                <span className='' onClick={(e) => handlePassword(e)} id='hide' ref={hideRef}><FontAwesomeIcon icon={faEyeSlash} /></span>
+                <span className='' onClick={(e) => handlePassword(e)} id='hide' ref={hideRef}><FontAwesomeIcon icon={faEyeSlash} size='xs'/></span>
                 <span className='hidden' id='show' onClick={(e) => handlePassword(e)} ref={showRef}><FontAwesomeIcon icon={faEye} /></span>
             </span>}
       </div>

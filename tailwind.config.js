@@ -11,7 +11,8 @@ module.exports = {
         light: 'hsla(220, 20%, 97.6%, 1)',
       },
       fontFamily: {
-        Roboto:'Roboto',
+        Roboto: 'Roboto',
+        Montserrat: 'Montserrat'
       }
     },
   },

@@ -8,8 +8,8 @@ const Table = ({header,ths,datas,btn}) => {
     { id: 4, name: 'Bob Brown', age: 42, email: 'bob@example.com' },
     ];
   return (
-        <div className="flex justify-center w-full opacity-90">
-            <div className="shadow-md shadow-[#999] w-full my-10 overflow-x-auto">
+        <div className="flex justify-center w-full opacity-90 mb-10">
+            <div className="shadow-md shadow-[#999] w-full my-10 overflow-x-auto rounded-md ">
                   <h2 className='text-center my-2 text-lg font-bold'>{ header }</h2>
                 <table className='w-full'>
                     <thead className=''>

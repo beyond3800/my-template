@@ -3,7 +3,9 @@ import React from 'react'
 const Wrap = ({children}) => {
   return (
     < div className={`flex flex-wrap gap-3`} >
-        {children}
+      {React.Children.map(children, (child) => {
+          return React.cloneElement(child)
+        })}
     </div >
         
   )
