@@ -121,8 +121,8 @@ const Cal = () => {
   return (
     <div>
       <Content>
-        <div className="container flex justify-center items-center">
-          <Card style={`rounded-lg border-2`}>
+        <div className="flex justify-center items-center h-full">
+          <Card style={`rounded-lg border-2 `}>
             <div className={`text-2xl mb-10 overflow-x-auto text-right pr-9`}>{calInput}</div>
             <div className='cal_btnArea'>
                 <CustomBtn id="ac" style={`cal_btn `} handleClick={(e)=>handleCal(e)}>AC</CustomBtn>

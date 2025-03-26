@@ -60,7 +60,7 @@ const SideNav = () => {
                             <Dropdown>
                                 <DropdownHeader style={`link`}>
                                     <span className='mr-2'><FontAwesomeIcon icon={faFile} /></span>
-                                    <span>Pages</span>
+                                    <span>Projects</span>
                                 </DropdownHeader>
                                     <NavDropdown header='Pages' style={''}>
                                     <DropdownItem to={`/potfolio`}>
